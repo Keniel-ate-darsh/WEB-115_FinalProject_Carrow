@@ -24,4 +24,9 @@ This will be a connect 4 2D game that will maybe show animation (I haven't decid
 |Classes and Sub Classes| I will have a grid class and a Chip class. The grid class will be used to make the grid and keep track of everything that goes inside it. The chip class will deal with making the animation knowing where a chip is and making a chip childs of others. I will have a sub class of the correct path it will inherit from chip class and check if it is 4 in a row.
 
 ## DLC -- Additional Topics
-I will use Fetch to get music when you win lose or the game is ongoing. 
+I will use HTML canvas to make the connect 4 board. I will also use it to convert the board to say win or lose based on how the game goes. After the user clicks a reset game button the blank connect 4 board will come back. 
+
+## Tech Stack
+- HTML, CSS, Vanila Javascript
+- VS code + Github
+- HTML canvas visualls 
