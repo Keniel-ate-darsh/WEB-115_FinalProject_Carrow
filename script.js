@@ -1,27 +1,32 @@
-let canvas = document.getElementById("canvasTable")
-let context = canvas.getContext("2d")
-let bw = (Object.keys(this.data[0]).length) * 200;
-let bh = (this.data.length + 1) * 40;
-let p = 10;
-context.clearRect(0,0,canvas.width,canvas.height);
-for(let x = 0; x <= bw; x+=100){
-    context.moveTo(0.5 + x + p,p)
+let canvas = document.getElementById("canvas");
+let context = canvas.getContext("2d");
+let numRows = 6;
+let numCols = 7;
+let circleRadius = canvas.width/(numCols*2);
+let turnRed = true;
 
-    context.lineTo(0.5 + x + p,bh + p);
-
+function start() {
+    drawBoard();
+    //canvas.addEventListener("click",placeToken);
 }
-for(let x = 0; x <= bh; x+=40){
-    context.moveTo(p,0.5+x+p);
-    context.lineTo(bw + p, 0.5 + x + p);
-
+function drawBoard(){
+    context.fillStyle = "blue";
+    context.fillRect(0,0, canvas.width, canvas.height)
+    let cellWidth = canvas.width/ numCols;
+    let cellHeight = canvas.height/ numRows;
+for(let row=0; row <  numRows; row++){
+    for(let col = 0; col < numCols; col++){
+        let x = col * cellWidth + cellWidth / 2 
+        let y = row * cellHeight + cellHeight / 2
+        drawCircle(x,y,circleRadius,"white")
 }
-context.strokeStyle = "black"
-context.stroke()
-let keys = Object.keys(this.data[0])
-
-for(let y = 80, count = 0; y <= bh; y += 40){
-    for(let x = 0, keyCount = 0; x < bw; x += 200){
-        context
-    }
-
 }
+}
+function drawCircle(x, y, radius, color) {
+    context.beginPath();
+    context.arc(x, y, radius, 0, Math.PI * 2);
+    context.fillStyle = color;
+    context.fill();
+    context.closePath();
+}
+start();
