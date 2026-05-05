@@ -44,6 +44,8 @@ function placeToken(event){
 drawBoard();
 }
 function checkWinner(grid,token){
-
+    if(token[row][col] == "red"){
+        
+    }
 }
 start();
