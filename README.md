@@ -29,4 +29,6 @@ I will use HTML canvas to make the connect 4 board. I will also use it to conver
 ## Tech Stack
 - HTML, CSS, Vanila Javascript
 - VS code + Github
-- HTML canvas visualls 
+- HTML canvas visualls
+
+  https://keniel-ate-darsh.github.io/WEB-115_FinalProject_Carrow/ 
